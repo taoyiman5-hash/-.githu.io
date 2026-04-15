@@ -1,0 +1,364 @@
+<!-- 奉化江小院 - 辐射入场开场页 (饱和度增强与端正版) -->
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=390, height=884, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;600&amp;family=Manrope:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#7f552f",
+                    "tertiary": "#7c5730",
+                    "surface-container-lowest": "#ffffff",
+                    "outline": "#82756a",
+                    "on-secondary-fixed": "#1c1d03",
+                    "surface-bright": "#fbf9f5",
+                    "background": "#fbf9f5",
+                    "primary-fixed": "#ffdcc1",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#30312e",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#643e1a",
+                    "surface": "#fbf9f5",
+                    "surface-container-highest": "#e4e2de",
+                    "primary": "#7f552f",
+                    "on-surface-variant": "#50453b",
+                    "primary-container": "#d7a275",
+                    "tertiary-container": "#d2a477",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#f3bb8d",
+                    "error": "#ba1a1a",
+                    "secondary": "#60603f",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#2e1500",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#5d3814",
+                    "inverse-on-surface": "#f2f0ed",
+                    "tertiary-fixed-dim": "#eebd8e",
+                    "surface-dim": "#dbdad6",
+                    "tertiary-fixed": "#ffdcbd",
+                    "on-tertiary-fixed-variant": "#61401b",
+                    "on-error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#484929",
+                    "secondary-fixed-dim": "#c9c9a0",
+                    "on-secondary-container": "#666644",
+                    "secondary-fixed": "#e6e5ba",
+                    "secondary-container": "#e6e5ba",
+                    "outline-variant": "#d4c4b7",
+                    "on-surface": "#1b1c1a",
+                    "surface-container-low": "#f5f3ef",
+                    "primary-fixed-dim": "#f3bb8d",
+                    "on-background": "#1b1c1a",
+                    "surface-container": "#efeeea",
+                    "on-tertiary-container": "#5a3915",
+                    "surface-variant": "#e4e2de",
+                    "surface-container-high": "#eae8e4",
+                    "on-tertiary-fixed": "#2c1600"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif SC"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+    @keyframes radiate-top-left {
+        0% { transform: translate(-50%, -50%) scale(0.7); opacity: 0; }
+        100% { transform: translate(-75%, -85%) scale(1); opacity: 1; }
+    }
+    @keyframes radiate-top-right {
+        0% { transform: translate(-50%, -50%) scale(0.7); opacity: 0; }
+        100% { transform: translate(5%, -70%) scale(1.05); opacity: 1; }
+    }
+    @keyframes radiate-bottom-left {
+        0% { transform: translate(-50%, -50%) scale(0.7); opacity: 0; }
+        100% { transform: translate(-85%, 20%) scale(0.95); opacity: 1; }
+    }
+    @keyframes radiate-bottom-right {
+        0% { transform: translate(-50%, -50%) scale(0.7); opacity: 0; }
+        100% { transform: translate(15%, 15%) scale(1.1); opacity: 1; }
+    }
+    @keyframes fade-in-title {
+        0% { opacity: 0; transform: translateY(10px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes grain {
+        0%, 100% { transform: translate(0, 0); }
+        10% { transform: translate(-1%, -1%); }
+        30% { transform: translate(1%, -1%); }
+        50% { transform: translate(-1%, 1%); }
+        70% { transform: translate(1%, 1%); }
+        90% { transform: translate(-1%, -1%); }
+    }
+    .animate-top-left { animation: radiate-top-left 2.8s cubic-bezier(0.16, 1, 0.3, 1) forwards }
+    .animate-top-right { animation: radiate-top-right 3s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards }
+    .animate-bottom-left { animation: radiate-bottom-left 2.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards }
+    .animate-bottom-right { animation: radiate-bottom-right 2.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards }
+    .animate-title { animation: fade-in-title 2.2s ease-out 1.5s forwards }
+    .grain-overlay {
+        position: fixed;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBLtQWCcvaBbn-BX3H5u8kIO3xBudIswKnd9-Vr9vWmZMqkkcV3PXECxt1oOynRpB5qLEBnqxYOyQ9-4F43cnM_lJkmx3ETVoRr2RulvVfvrQVe5ISBawNsp2gZQoXpSbYqFAGxScxXa1koc1Q2etS45l_H4oFmn1k9km8HpA5n0-aLWF3xlwyfRHT0uRzlFL-vI6_pIulUblyNOnU7V5-rASWeig4dk6HIPEcbAqnsRecx5VAux4DptWZ8GeKiR-jrwfETVNJ-gdU);
+        opacity: 0.12;
+        pointer-events: none;
+        z-index: 100;
+        animation: grain 8s steps(10) infinite;
+    }
+    .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+    }
+    .vibrant-grade {
+        filter: saturate(1.4) contrast(1.05) brightness(1.02);
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    </style>
+</head>
+<body class="bg-surface font-body overflow-hidden w-[390px] h-[884px] relative">
+<!-- Grain/Paper Texture Overlay -->
+<div class="grain-overlay"></div>
+<!-- Soft Tonal Background Gradient -->
+<div class="absolute inset-0 bg-gradient-to-b from-surface via-surface-container-low to-surface-container-high opacity-60"></div>
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 h-16 bg-transparent">
+<span class="material-symbols-outlined text-primary cursor-pointer">arrow_back</span>
+<span class="font-label text-[10px] tracking-[0.3em] uppercase text-on-surface-variant/40">Opening</span>
+<span class="material-symbols-outlined text-on-surface-variant/40 cursor-pointer">more_vert</span>
+</header>
+<!-- Main Content Canvas -->
+<main class="relative w-full h-full flex flex-col items-center justify-center">
+<!-- Center Title -->
+<div class="absolute top-36 w-full text-center px-8 opacity-0 animate-title z-40">
+<h1 class="font-headline text-4xl tracking-[0.25em] text-on-surface font-semibold mb-3">奉化江小院</h1>
+<p class="font-headline text-[13px] tracking-[0.3em] text-on-surface-variant font-medium">在山海之间，寻家乡味道</p>
+<div class="mt-10 flex justify-center">
+<div class="w-px h-16 bg-gradient-to-b from-outline-variant/40 to-transparent"></div>
+</div>
+</div>
+<!-- Radiating Memory Grid -->
+<div class="relative w-full h-full flex items-center justify-center">
+<!-- Image 1: Top Left Flow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 animate-top-left z-20">
+<div class="w-44 h-60 bg-surface-container-highest overflow-hidden rounded-sm shadow-xl shadow-primary/5">
+<img alt="Chinese calligraphy banners in a garden with yellow wildflowers" class="w-full h-full object-cover vibrant-grade" src="https://lh3.googleusercontent.com/aida/ADBb0ui1xg_7EVHcZsoRRtz6ySNnRI5quPULYxjm9_ShJDZeedDtS22F70fSVURz7frhmksa4DdSsUUQl_fDsDYXydDOo5dFwib5Tm0FJtY04RuzvaqkEPktLLZ2g9Qh3IoZPrEFW2P7qMZhHeafUjAB3lsk2ZO6atRYlHB5HbpGtSSs_44gwggYu-Mh7hqnfrf1aMfVisoKkq2GBSvA0kb4XvqRXWXmXY-5VqPgdGIt_TVQoafnacWGg2crlMVKeMFlHHUGpFoV1X0BIQ"/>
+</div>
+</div>
+<!-- Image 2: Top Right Flow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 animate-top-right z-30">
+<div class="w-40 h-40 bg-surface-container-highest overflow-hidden rounded shadow-2xl shadow-primary/10 border-4 border-surface">
+<img alt="Outdoor shaded pathway with trees and a seating area" class="w-full h-full object-cover vibrant-grade" src="https://lh3.googleusercontent.com/aida/ADBb0ugX7JSgnlJJcYIsnjWCZsTnYSgBbcs0-ZHUHXZgtaXRjXlA6vFf1nkNrmkl4nlRPI_cnz_21WmPOjXELdknZbDGNxWP7jz6s_Tm1J6l6fuW5Jn_FRLlzcNsr4pPZkob98ZBF4KWItGgq2_vW1TIwrkJNs56AaaYJRVYi4GZgiOYQPD6jZ3R4NKIR0GRfBOtjTIvFi33O48wMcZd7YIVgQSAAuZrUeJ3o2XIyXhy42TuQP23-qR6FhAczCw2eS9WZirg-ufrUu3XqA"/>
+</div>
+</div>
+<!-- Image 3: Bottom Left Flow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 animate-bottom-left z-10">
+<div class="w-52 h-36 bg-surface-container-highest overflow-hidden rounded shadow-lg shadow-primary/5">
+<img alt="Wooden cabins nestled among lush green trees on a lawn" class="w-full h-full object-cover vibrant-grade" src="https://lh3.googleusercontent.com/aida/ADBb0ujp_if6ZuNCNfjbSL_mXWKCS7ooCqZ6ImV2bWaX_uBH-N6CeweJTaBaBZPix-OY8tzwzAraOnXiOrJhjRvpRt1xZqjsE0FZPQYkKGSRmPHNtipVmZDk17il3tMoDz6M2ZHhauqomIHVJXgWBFUNo4WQLEyNnuJcez9BKlQZEbAXb_go85V6Z7fEwXmEqhBS80src_hl-a7LUI7nq4EXxKU_vhIqOIM3lL57qQ0nGIlnne9cT71vanxO1j45KaGeSFH7cnb3GCAMAA"/>
+</div>
+</div>
+<!-- Image 4: Bottom Right Flow -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 animate-bottom-right z-20">
+<div class="w-40 h-52 bg-surface-container-highest overflow-hidden rounded shadow-xl shadow-primary/5">
+<img alt="Sun-dappled garden path with a white tent and fence" class="w-full h-full object-cover vibrant-grade" src="https://lh3.googleusercontent.com/aida/ADBb0uj8jqwKX-B6FJXB4slbJ88QMZ7iUf0Rizb1DRHLh0fmWbSlDXo8IOvPZlaK5_Om0bSl8fBBvUGqq2CUiotkgJP5UYHKC5y2VH_KZoSnUUtrox6YpfGqIhXV2CjDuTMH4EvOalY3EM3VRHb_cK-ocRhHsegq2cWui5ZzMFp3MSNqSCfdNQsyoszVT9FdeYUIsAZlBqdmU5rQd2iH-qDIMa_A0cD4CAZvezc0-cIZ-1qpsCexclegoi5v_IvgtpHj3HFVxkS_k32dmw"/>
+</div>
+</div>
+<!-- Center Decorative Anchor -->
+<div class="z-50 w-1.5 h-1.5 rounded-full bg-primary/30 backdrop-blur-sm ring-4 ring-primary/5"></div>
+</div>
+<!-- Footer Caption -->
+<div class="absolute bottom-28 w-full text-center px-12 opacity-0 animate-title delay-[2000ms]">
+<p class="font-headline text-[13px] tracking-[0.3em] text-on-surface-variant font-medium">
+                "江水悠悠，小院静谧"
+            </p>
+<p class="font-headline text-[13px] tracking-[0.3em] text-on-surface-variant font-medium">
+                WHERE TIME FLOWS BACKWARDS
+            </p>
+</div>
+</main>
+<!-- Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-10 pb-10 pt-4 bg-gradient-to-t from-surface to-surface/0 backdrop-blur-sm">
+<div class="flex items-center justify-center text-on-surface-variant/30 p-2 transition-colors hover:text-primary flex-col gap-1">
+<span class="material-symbols-outlined" data-icon="nature_people">nature_people</span><span class="text-[10px] tracking-wider font-label whitespace-nowrap">点击进入</span>
+</div>
+<div class="flex items-center justify-center text-on-surface-variant/30 p-2 transition-colors hover:text-primary">
+</div>
+<div class="flex items-center justify-center text-on-surface-variant/30 p-2 transition-colors hover:text-primary">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</div>
+</nav>
+<!-- Subtle Ambient Bloom Effects -->
+<div class="absolute top-1/4 right-0 w-72 h-72 bg-primary-container/10 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="absolute bottom-1/4 left-0 w-64 h-64 bg-tertiary-container/10 blur-[100px] rounded-full pointer-events-none"></div>
+</body></html>
+
+<!-- 奉化江小院 - 艺术背景摇一摇交互页 -->
+<!DOCTYPE html>
+
+<html class="light" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=390, height=844, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&amp;family=Manrope:wght@400;500;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#7f552f",
+                        "tertiary": "#7c5730",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#82756a",
+                        "on-secondary-fixed": "#1c1d03",
+                        "surface-bright": "#fbf9f5",
+                        "background": "#fbf9f5",
+                        "primary-fixed": "#ffdcc1",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#30312e",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#643e1a",
+                        "surface": "#fbf9f5",
+                        "on-surface-variant": "#50453b",
+                        "primary": "#7f552f",
+                        "on-surface-variant": "#50453b",
+                        "primary-container": "#d7a275",
+                        "tertiary-container": "#d2a477",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#f3bb8d",
+                        "error": "#ba1a1a",
+                        "secondary": "#60603f",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#2e1500",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#5d3814",
+                        "inverse-on-surface": "#f2f0ed",
+                        "tertiary-fixed-dim": "#eebd8e",
+                        "surface-dim": "#dbdad6",
+                        "tertiary-fixed": "#ffdcbd",
+                        "on-tertiary-fixed-variant": "#61401b",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#484929",
+                        "secondary-fixed-dim": "#c9c9a0",
+                        "on-secondary-container": "#666644",
+                        "secondary-fixed": "#e6e5ba",
+                        "secondary-container": "#e6e5ba",
+                        "outline-variant": "#d4c4b7",
+                        "on-surface": "#1b1c1a",
+                        "surface-container-low": "#f5f3ef",
+                        "primary-fixed-dim": "#f3bb8d",
+                        "on-background": "#1b1c1a",
+                        "surface-container": "#efeeea",
+                        "on-tertiary-container": "#5a3915",
+                        "surface-variant": "#e4e2de",
+                        "surface-container-high": "#eae8e4",
+                        "on-tertiary-fixed": "#2c1600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif SC", "serif"],
+                        "body": ["Manrope", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #000;
+            overflow: hidden;
+        }
+        .serif-text {
+            font-family: 'Noto Serif SC', serif;
+        }
+        .glow-effect {
+            box-shadow: 0 0 80px 20px rgba(215, 162, 117, 0.15);
+        }
+        .text-shadow-sm {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+    </style>
+<style>.interaction-pulse { animation: pulse 0.3s ease-out; } @keyframes pulse { 0% { background-color: rgba(255,255,255,0); } 50% { background-color: rgba(255,255,255,0.1); } 100% { background-color: rgba(255,255,255,0); } }</style></head>
+<body class="flex items-center justify-center min-h-screen">
+<!-- Mobile Container (390x844 simulated) -->
+<main class="w-[390px] h-[844px] relative overflow-hidden flex flex-col justify-between py-12 transition-colors duration-1000">
+<!-- Main Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Background Artwork" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uj04Lq061f6z1PkadMgeupwvyGM6JfCHQyD4pZYwFBd0eFksHbmIS6VZyXsZWEp6rL2o6w1A7F0H5CAuGacOzCO98mgQ2HIaIyRzKZYOPrcfH61T7qBG39oXrJxHFYx-EAp3Q5T2QQgmolBip_Q5FVExmQ3DkwXs9HkYDZh7nPe7s-hwmUIvnEHa0tPx0TKGjsHJN9PqnBAw8a65zGK-M7z6gHfGyff4NW3UmQdabOW7QgFI6cR33HFNWWFZhJMWWwaRytJiCQI7w"/>
+<!-- Overlay to ensure readability of UI elements -->
+<div class="absolute inset-0"></div>
+</div>
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 flex items-center px-6 h-16 bg-transparent">
+<button class="flex items-center gap-2 group hover:opacity-70 transition-opacity duration-400">
+<span class="material-symbols-outlined text-on-surface text-shadow-sm">arrow_back</span>
+<span class="font-label text-sm tracking-widest uppercase text-on-surface font-semibold text-shadow-sm">返回</span>
+</button>
+</header>
+<!-- Center Interaction Area -->
+<section class="flex-1 flex flex-col items-center justify-center px-8 text-center relative z-10">
+<!-- Removed Hero Image Container -->
+<!-- Poetic Prompt -->
+<div class="mt-auto mb-12 space-y-4">
+<p class="serif-text text-xl font-medium text-on-surface leading-relaxed tracking-wide text-shadow-sm bg-white/30 backdrop-blur-sm px-6 py-3 rounded-full">摇一摇手机，听听小鸡的问候</p>
+<div class="flex justify-center">
+<div class="w-12 h-[2px] bg-on-surface/40"></div>
+</div>
+<p class="font-label text-[10px] tracking-[0.2em] uppercase text-on-surface font-bold text-shadow-sm">
+                    Gently shake to awaken the sound
+                </p>
+</div>
+</section>
+<!-- Persistent Interaction Feedback (Footer) -->
+<footer class="flex flex-col items-center gap-6 pb-8 relative z-10">
+<!-- Simulated Volume/Progress indicator -->
+<div class="w-48 h-1 rounded-full overflow-hidden relative">
+<div class="absolute left-0 top-0 h-full w-1/3 bg-primary transition-all duration-[3000ms] ease-in-out"></div>
+</div>
+<div class="flex items-center gap-8">
+<button class="p-3 text-on-surface/60 hover:text-primary transition-colors duration-400">
+<span class="material-symbols-outlined">waves</span>
+</button>
+<div class="relative flex items-center justify-center">
+<div class="absolute inset-0 bg-white/10 blur-xl rounded-full"></div>
+<button class="w-20 h-20 rounded-[2rem] bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center text-on-surface shadow-sm hover:bg-white/30 transition-all duration-500 ease-in-out">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<button class="p-3 text-on-surface/60 hover:text-primary transition-colors duration-400">
+<span class="material-symbols-outlined">nature_people</span>
+</button>
+</div>
+</footer>
+<!-- Interaction Layer -->
+<div class="absolute inset-0 cursor-pointer z-20 transition-colors" onclick="const chick = document.getElementById('chick-sound'); chick.currentTime = 0; chick.play(); this.classList.add('interaction-pulse'); setTimeout(() =&gt; this.classList.remove('interaction-pulse'), 300);" title="Shake or Click to interact"></div>
+</main>
+<audio id="chick-sound" preload="auto" src="https://www.soundjay.com/nature/sounds/baby-chick-chirp-01.mp3"></audio><audio id="hen-sound" preload="auto" src="https://www.soundjay.com/nature/sounds/chicken-cluck-1.mp3"></audio></body></html>
